@@ -1,0 +1,16 @@
+<div *ngIf="hero">
+  <div style="border : 1px outset;width:290px;height:290px;">
+    <img src="{{hero.fullImagePath}}" width="250" height="250"/>
+  </div>
+    <h2>{{ hero.name | uppercase }} Details</h2>
+    <div><span>id: </span>{{hero.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="hero.name" placeholder="name"/>
+      </label>
+    </div>
+    <button (click)="save()">save</button>
+    <button (click)="goBack()">go back</button>
+  </div>
+
+  
